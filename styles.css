@@ -123,6 +123,11 @@ main > .articles {
   display: grid;
   grid-template-columns: 3fr 1fr;
   margin: 0 3rem;
+  gap: 1.5rem;
+}
+
+main > .articles > article {
+  grid-column: 1/2;
 }
 
 main header {
@@ -184,4 +189,60 @@ p {
 
 main {
   background: var(--background);
+}
+
+aside {
+  align-self: start;
+  grid-area: 1 / 2 / 4;
+  background: linear-gradient(white 123px, var(--five) 123px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem 2rem 1rem;
+  gap: 1rem;
+  width: 246px;
+}
+
+.bottom-img-wrapper {
+  align-self: stretch;
+  grid-area: 2 / 1;
+  filter: grayscale(1);
+  background: url(./assets/cat-in-the-chair.svg);
+  width: 100%;
+  padding-bottom: 100%;
+  margin: 0;
+}
+
+aside button {
+  font-size: 1.5rem;
+  padding: 0.25rem 3rem;
+  font-family: Roboto;
+  border: none;
+  border-radius: 5px;
+  background: var(--four);
+  color: white;
+}
+
+aside h3,
+p {
+  font-family: Lora;
+  text-align: center;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+aside p {
+  font-size: 1.25rem;
+}
+
+aside input {
+  height: 50px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  padding: 0.5rem 1rem;
+  background: var(--two);
 }
